@@ -1,16 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: "portfolio",
+    title: `portfolio`,
   },
   plugins: [
-    "gatsby-plugin-mdx",
+    `gatsby-plugin-mdx`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        fonts: [
+          {
+            family: `IBM Plex Mono`,
+            variants: [`100..700`, `100i..700i`],
+          },
+        ],
       },
-      __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `./src/pages/`,
+      },
+      __key: `pages`,
     },
   ],
 };

@@ -1,0 +1,28 @@
+.nav-menu {
+  position: relative;
+  display: inline-flex;
+  background-color: transparent;
+}
+
+.nav-menu__selected {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-menu__selected:hover {
+  cursor: pointer;
+}
+
+.nav-menu__dropdown {
+  position: absolute;
+  top: 40px;
+}
+
+.nav-menu__dropdown > * {
+  margin-top: 9px;
+}
+
+.nav-menu__down-icon {
+  margin-left: 5px;
+  margin-top: 7px;
+}
