@@ -1,35 +1,58 @@
 import React, { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Link } from 'gatsby'
 
 import '../styles/NavMenu.css'
 import Highlight2 from './Highlight2'
 
 
-const NavMenu = ({ options }) => {
-    const [open, setOpen] = useState(false)
+const NavMenu = ({ options, location }) => {
+    const [dropdownOpen, setDropdownOpen] = useState(false)
+
+    const site = document.getElementById('___gatsby')
+
+    const close = () => {
+        setDropdownOpen(false)
+        site.removeEventListener('click', close)
+    }
+
+    const open = () => {
+        setDropdownOpen(true)
+        site.addEventListener('click', close)
+    }
+
+    const toggleDropdown = () => {
+        if (!dropdownOpen) open()
+    }
+
+    const path = location.pathname.replace('/', '')
 
     return (
         <div className='nav-menu'>
             <div
                 className='nav-menu__selected'
-                onClick={() => setOpen(!open)}
-                onKeyDown={() => setOpen(!open)}
+                onClick={() => toggleDropdown()}
+                onKeyDown={() => toggleDropdown()}
                 role='button'
                 tabIndex='0'
             >
-                <Highlight2 content={options[0]} />
+                <Highlight2 content={path} />
                 <div className='nav-menu__down-icon'>
-                    {open ? (
+                    {dropdownOpen ? (
                         <FaChevronUp />
                     ) : (
                         <FaChevronDown />
                     )}
                 </div>
             </div>
-            {open && (
+            {dropdownOpen && (
                 <div className='nav-menu__dropdown'>
                     {options.map((option, key) => (
-                        <Highlight2 content={option} key={key} />
+                        path !== option && (
+                            <Link to={`/${option}`}>
+                                <Highlight2 content={option} key={key} />
+                            </Link>
+                        )
                     ))}
                 </div>
             )}

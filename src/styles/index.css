@@ -3,6 +3,7 @@
   --color__text: #073642;
   --color__border: #ddd7c6;
   --color__accent: #f5bfbb;
+  --color__accent-alt: #df7f72;
 
   --space__std: 20px;
 }
@@ -14,6 +15,7 @@
     --color__text: #fdf6e3;
     --color__border: #455255;
     --color__accent: #d47467;
+    --color__accent-alt: #d47467;
   }
 }
 
@@ -30,6 +32,16 @@ body {
   background-color: var(--color__background);
   color: var(--color__text);
   font-family: 'IBM Plex Mono', arial;
+}
+
+a {
+  color: var(--color__accent-alt);
+  font-weight: bold;
+}
+
+h3 {
+  border-bottom: 3px solid var(--color__accent);
+  display: inline;
 }
 
 .site-layout {

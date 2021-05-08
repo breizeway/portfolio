@@ -2,7 +2,7 @@ import React from 'react'
 
 import Header from './Header'
 
-const SiteLayout = ({ children, location }) => {
+const Layout = ({ children, location }) => {
     return (
         <div className='site-layout'>
             <Header location={location} />
@@ -12,4 +12,4 @@ const SiteLayout = ({ children, location }) => {
 }
 
 
-export default SiteLayout
+export default Layout
