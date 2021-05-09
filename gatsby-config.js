@@ -3,7 +3,22 @@ module.exports = {
     title: `portfolio`,
   },
   plugins: [
-    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 200,
+              marginLeft: 0,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {

@@ -4,7 +4,7 @@
   --color__text-light: #92a9af;
   --color__border: #ddd7c6;
   --color__accent: #f5bfbb;
-  --color__accent-alt: #df7f72;
+  --color__accent-alt: #e29c9c;
 
   --space__std: 20px;
 
@@ -55,4 +55,10 @@ h3 {
   width: 100vw;
   height: 100vh;
   padding: var(--space__std);
+}
+
+.gatsby-resp-image-wrapper {
+  margin: 0 !important;
+  /* border: var(--size__border) solid var(--color__text); */
+  box-shadow: 3px 3px var(--color__text);
 }
