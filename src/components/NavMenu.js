@@ -49,8 +49,8 @@ const NavMenu = ({ options, location }) => {
                 <div className='nav-menu__dropdown'>
                     {options.map((option, key) => (
                         path !== option && (
-                            <Link to={`/${option}`}>
-                                <Highlight2 content={option} key={key} />
+                            <Link to={`/${option}`} key={key}>
+                                <Highlight2 content={option}/>
                             </Link>
                         )
                     ))}

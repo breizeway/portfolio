@@ -14,7 +14,7 @@ const Header = ({ location }) => {
 
     return (
         <div className='header'>
-            <h1>Tannor Breitigam</h1>
+            <h1 className='header__name'>Tannor Breitigam</h1>
             <NavMenu options={options} location={location}/>
         </div>
     )

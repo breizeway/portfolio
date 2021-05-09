@@ -1,12 +1,16 @@
 import React from 'react'
 
 import Header from './Header'
+import Footer from './Footer'
 
 const Layout = ({ children, location }) => {
     return (
-        <div className='site-layout'>
-            <Header location={location} />
-            {children}
+        <div className='layout'>
+            <div className='layout-content'>
+                <Header location={location} />
+                {children}
+            </div>
+            <Footer />
         </div>
     )
 }

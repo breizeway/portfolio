@@ -1,11 +1,14 @@
 :root {
   --color__background: #fdf6e3;
   --color__text: #073642;
+  --color__text-light: #92a9af;
   --color__border: #ddd7c6;
   --color__accent: #f5bfbb;
   --color__accent-alt: #df7f72;
 
   --space__std: 20px;
+
+  --size__border: 3px;
 }
 
 
@@ -13,6 +16,7 @@
   :root {
     --color__background: #23292b;
     --color__text: #fdf6e3;
+    --color__text-light: #69665d;
     --color__border: #455255;
     --color__accent: #d47467;
     --color__accent-alt: #d47467;
@@ -40,12 +44,15 @@ a {
 }
 
 h3 {
-  border-bottom: 3px solid var(--color__accent);
+  border-bottom: var(--size__border) solid var(--color__accent);
   display: inline;
 }
 
-.site-layout {
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  padding: 0 var(--space__std);
+  padding: var(--space__std);
 }

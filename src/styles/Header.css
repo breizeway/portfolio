@@ -1,3 +1,7 @@
 .header {
   margin-bottom: var(--space__std);
 }
+
+.header__name {
+  margin-top: 0;
+}
