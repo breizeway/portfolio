@@ -6,7 +6,7 @@ import '../styles/Footer.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            <div>built and designed by Tannor Breitigam to be fast, responsive, and light-weight</div>
+            <div>this site was made (by me) using Gatsby and GraphQL</div>
             <div><a href='https://github.com/breizeway/portfolio'>learn more</a></div>
         </div>
     )
