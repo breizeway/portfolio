@@ -1,18 +1,17 @@
 import React from 'react'
 
-import '../styles/index.css'
+import '../styles/About.css'
 import Layout from '../components/Layout'
 
-const Index = ({ location }) => {
+const Projects = ({ location }) => {
     return (
         <Layout location={location}>
-            <div className=''>
-                test
+            <div className='projects'>
+                Projects
             </div>
-
         </Layout>
     )
 }
 
 
-export default Index
+export default Projects

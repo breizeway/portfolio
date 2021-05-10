@@ -1,10 +1,14 @@
 :root {
   --color__background: #fdf6e3;
   --color__text: #073642;
+  --color__text-light: #92a9af;
   --color__border: #ddd7c6;
   --color__accent: #f5bfbb;
+  --color__accent-alt: #e29c9c;
 
   --space__std: 20px;
+
+  --size__border: 3px;
 }
 
 
@@ -12,8 +16,10 @@
   :root {
     --color__background: #23292b;
     --color__text: #fdf6e3;
+    --color__text-light: #69665d;
     --color__border: #455255;
     --color__accent: #d47467;
+    --color__accent-alt: #d47467;
   }
 }
 
@@ -32,8 +38,36 @@ body {
   font-family: 'IBM Plex Mono', arial;
 }
 
-.site-layout {
-  width: 100vw;
-  height: 100vh;
-  padding: 0 var(--space__std);
+a {
+  color: var(--color__accent-alt);
+  font-weight: bold;
+}
+
+h3 {
+  border-bottom: var(--size__border) solid var(--color__accent);
+  display: inline;
+}
+
+h4 {
+  display: inline;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: var(--space__std);
+}
+
+.gatsby-resp-image-wrapper {
+  margin: 0 !important;
+  /* border: var(--size__border) solid var(--color__text); */
+  box-shadow: 3px 3px var(--color__text);
+
+  /* border-right: 3px solid var(--color__accent);
+  border-bottom: 3px solid var(--color__accent);
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent; */
 }

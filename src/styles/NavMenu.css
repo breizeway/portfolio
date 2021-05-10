@@ -2,6 +2,7 @@
   position: relative;
   display: inline-flex;
   background-color: transparent;
+  z-index: 1;
 }
 
 .nav-menu__selected {
@@ -19,7 +20,11 @@
 }
 
 .nav-menu__dropdown > * {
+  display: block;
   margin-top: 9px;
+  text-decoration: inherit;
+  color: inherit;
+  font-weight: inherit;
 }
 
 .nav-menu__down-icon {
