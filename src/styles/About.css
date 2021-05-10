@@ -1,0 +1,5 @@
+.about .gatsby-resp-image-wrapper {
+  margin: 0 !important;
+  box-shadow: 6px 6px var(--color__accent-alt);
+  border: 1px solid var(--color__text)
+}

@@ -54,21 +54,10 @@ a {
 
 h3 {
   border-bottom: var(--size__border) solid var(--color__accent);
-  display: inline;
+  display: inline-block;
+  margin: 10px 0;
 }
 
 h4 {
-  display: inline;
-}
-
-.gatsby-resp-image-wrapper {
-  margin: 0 !important;
-  /* border: var(--size__border) solid var(--color__text); */
-  box-shadow: 6px 6px var(--color__accent-alt);
-  border: 1px solid var(--color__text)
-
-  /* border-right: 3px solid var(--color__accent);
-  border-bottom: 3px solid var(--color__accent);
-  border-top: 3px solid transparent;
-  border-left: 3px solid transparent; */
+  display: inline-block;
 }

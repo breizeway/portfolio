@@ -1,0 +1,7 @@
+.technologies svg {
+  max-width: 200px;
+}
+
+.technologies__link {
+  display: block;
+}
