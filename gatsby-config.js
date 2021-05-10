@@ -34,9 +34,24 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `./src/markdown-pages/`,
+        path: `${__dirname}/src/markdown-pages/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `technologies`,
+        path: `${__dirname}/src/images/technologies`,
+      },
+    },
+    `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
   ],
 };
