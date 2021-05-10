@@ -2,17 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import '../styles/Contact.css'
+import '../styles/Technologies.css'
 import Layout from '../components/Layout'
 import MDXWrapper from '../components/MdxWrapper';
 
 
-const Contact = ({ location, data }) => {
+const Technologies = ({ location, data }) => {
     const { body } = data.mdx;
 
     return (
         <Layout location={location}>
-            <div className='contact'>
+            <div className='technologies'>
                 <MDXWrapper>
                     <MDXRenderer>
                         {body}
@@ -24,7 +24,7 @@ const Contact = ({ location, data }) => {
 }
 
 export const query = graphql`query {
-    mdx(slug: { eq: "contact" }) {
+    mdx(slug: { eq: "technologies" }) {
         id
         slug
         body
@@ -35,4 +35,4 @@ export const query = graphql`query {
 }`;
 
 
-export default Contact
+export default Technologies

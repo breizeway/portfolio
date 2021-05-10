@@ -6,8 +6,8 @@ import '../styles/Footer.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            <div>copyright 2021</div>
-            <div><a href='https://github.com/breizeway/portfolio'>about this site</a></div>
+            <div>built and designed by Tannor Breitigam to be fast, responsive, and light-weight</div>
+            <div><a href='https://github.com/breizeway/portfolio'>learn more</a></div>
         </div>
     )
 }

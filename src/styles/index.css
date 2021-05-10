@@ -48,12 +48,16 @@ h3 {
   display: inline;
 }
 
+h4 {
+  display: inline;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: var(--space__std);
 }
 
@@ -61,4 +65,9 @@ h3 {
   margin: 0 !important;
   /* border: var(--size__border) solid var(--color__text); */
   box-shadow: 3px 3px var(--color__text);
+
+  /* border-right: 3px solid var(--color__accent);
+  border-bottom: 3px solid var(--color__accent);
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent; */
 }

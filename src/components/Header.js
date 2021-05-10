@@ -10,6 +10,7 @@ const Header = ({ location }) => {
         'contact',
         'projects',
         'resume',
+        'technologies',
     ]
 
     return (

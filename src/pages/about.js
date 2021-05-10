@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import '../styles/About.css'
 import Layout from '../components/Layout'
+import MDXWrapper from '../components/MdxWrapper';
 
 
 const About = ({ location, data }) => {
@@ -11,9 +12,13 @@ const About = ({ location, data }) => {
 
     return (
         <Layout location={location}>
-            <MDXRenderer>
-                {body}
-            </MDXRenderer>
+            <div className='about'>
+                <MDXWrapper>
+                    <MDXRenderer>
+                        {body}
+                    </MDXRenderer>
+                </MDXWrapper>
+            </div>
         </Layout>
     )
 }
