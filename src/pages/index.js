@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, navigate } from 'gatsby';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import '../styles/index.css';
@@ -8,8 +8,19 @@ import MDXWrapper from '../components/MdxWrapper';
 
 const windowAvailable = typeof window !== 'undefined';
 
-const Index = ({ location, data }) => {
+const Index = ({ location }) => {
     if (windowAvailable) navigate('/about')
+
+    const data = useStaticQuery(graphql`query {
+        mdx(slug: { eq: "home" }) {
+            id
+            slug
+            body
+            frontmatter {
+                title
+            }
+        }
+    }`);
 
     const { body } = data.mdx;
 
@@ -25,17 +36,6 @@ const Index = ({ location, data }) => {
         </Layout>
     );
 };
-
-export const query = graphql`query {
-    mdx(slug: { eq: "home" }) {
-        id
-        slug
-        body
-        frontmatter {
-            title
-        }
-    }
-}`;
 
 
 export default Index;

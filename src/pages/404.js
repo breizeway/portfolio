@@ -1,12 +1,23 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 import MDXWrapper from '../components/MdxWrapper';
 
 
-const NotFound = ({ location, data }) => {
+const NotFound = ({ location }) => {
+    const data = useStaticQuery(graphql`query {
+        mdx(slug: { eq: "404" }) {
+            id
+            slug
+            body
+            frontmatter {
+                title
+            }
+        }
+    }`);
+
     const { body } = data.mdx;
 
     return (
@@ -21,17 +32,6 @@ const NotFound = ({ location, data }) => {
         </Layout>
     );
 };
-
-export const query = graphql`query {
-    mdx(slug: { eq: "404" }) {
-        id
-        slug
-        body
-        frontmatter {
-            title
-        }
-    }
-}`;
 
 
 export default NotFound;
