@@ -3,6 +3,7 @@ module.exports = {
     title: `portfolio`,
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
@@ -21,14 +22,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `IBM Plex Mono`,
-            variants: [`100..700`, `100i..700i`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `IBM Plex Mono`,
+              variants: [`300`, `400`, `500`, `600`, `700`],
+            },
+          ],
+        },
       },
     },
     {
