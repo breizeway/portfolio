@@ -5,11 +5,13 @@ import { Link } from 'gatsby'
 import '../styles/NavMenu.css'
 import Highlight2 from './NavSelected'
 
+const domAvailable = typeof document !== 'undefined'
+
 
 const NavMenu = ({ options, location }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
-    const site = document.getElementById('___gatsby')
+    const site = domAvailable ? document.getElementById('___gatsby') : null
 
     const close = () => {
         setDropdownOpen(false)
