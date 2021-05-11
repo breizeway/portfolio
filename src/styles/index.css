@@ -9,7 +9,7 @@
   --space__std: 20px;
 
   --size__border: 3px;
-  --size__content-witdh: 450px;
+  --size__content-witdh: 600px;
 }
 
 
@@ -52,6 +52,10 @@ a {
   font-weight: bold;
 }
 
+h1, h2 {
+  font-weight: normal;
+}
+
 h3 {
   border-bottom: var(--size__border) solid var(--color__accent);
   display: inline-block;
@@ -62,4 +66,13 @@ h4 {
   font-style: italic;
   font-weight: 700;
   font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+h5 {
+  margin: 6px 0;
+}
+
+h6 {
+  margin: 4px 0;
 }
