@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'gatsby';
 
-import '../styles/NavMenu.css';
-import Highlight2 from './NavSelected';
+import '../styles/nav-menu.css';
+import Highlight2 from './nav-selected';
 
 const domAvailable = typeof document !== 'undefined';
 

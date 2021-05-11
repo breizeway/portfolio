@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import '../styles/Projects.css';
-import Layout from '../components/Layout';
-import MDXWrapper from '../components/MdxWrapper';
+import '../styles/projects.css';
+import Layout from '../components/layout';
+import MDXWrapper from '../components/mdx-wrapper';
 
 
 const Projects = ({ location }) => {

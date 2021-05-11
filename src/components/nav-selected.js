@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/NavSelected.css';
+import '../styles/nav-selected.css';
 
 
 const NavSelected = ({ content }) => {

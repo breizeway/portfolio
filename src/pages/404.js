@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/Layout';
-import MDXWrapper from '../components/MdxWrapper';
+import Layout from '../components/layout';
+import MDXWrapper from '../components/mdx-wrapper';
 
 
 const NotFound = ({ location }) => {
