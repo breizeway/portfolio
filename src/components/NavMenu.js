@@ -3,7 +3,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'gatsby'
 
 import '../styles/NavMenu.css'
-import Highlight2 from './Highlight2'
+import Highlight2 from './NavSelected'
 
 
 const NavMenu = ({ options, location }) => {

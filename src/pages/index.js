@@ -1,17 +1,10 @@
-import React from 'react'
+import { navigate } from 'gatsby'
 
 import '../styles/index.css'
-import Layout from '../components/Layout'
 
-const Index = ({ location }) => {
-    return (
-        <Layout location={location}>
-            <div className=''>
-                test
-            </div>
-
-        </Layout>
-    )
+const Index = () => {
+    navigate('/about')
+    return null
 }
 
 

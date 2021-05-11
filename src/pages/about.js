@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import '../styles/About.css'
 import Layout from '../components/Layout'
