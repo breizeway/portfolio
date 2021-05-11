@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import '../styles/Footer.css'
+import '../styles/Footer.css';
 
 
 const Footer = () => {
@@ -8,8 +8,8 @@ const Footer = () => {
         <div className='footer'>
             <a href='https://github.com/breizeway/portfolio'>learn more</a> about how I made this site
         </div>
-    )
-}
+    );
+};
 
 
-export default Footer
+export default Footer;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import '../styles/NavSelected.css'
+import '../styles/NavSelected.css';
 
 
 const NavSelected = ({ content }) => {
@@ -16,9 +16,9 @@ const NavSelected = ({ content }) => {
             </div>
             <div className='nav-selected__right' />
         </div>
-    )
-}
+    );
+};
 
 
 
-export default NavSelected
+export default NavSelected;

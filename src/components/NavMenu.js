@@ -1,33 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
-import '../styles/NavMenu.css'
-import Highlight2 from './NavSelected'
+import '../styles/NavMenu.css';
+import Highlight2 from './NavSelected';
 
-const domAvailable = typeof document !== 'undefined'
+const domAvailable = typeof document !== 'undefined';
 
 
 const NavMenu = ({ options, location }) => {
-    const [dropdownOpen, setDropdownOpen] = useState(false)
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const site = domAvailable ? document.getElementById('___gatsby') : null
+    const site = domAvailable ? document.getElementById('___gatsby') : null;
 
     const close = () => {
-        setDropdownOpen(false)
-        site.removeEventListener('click', close)
-    }
+        setDropdownOpen(false);
+        site.removeEventListener('click', close);
+    };
 
     const open = () => {
-        setDropdownOpen(true)
-        site.addEventListener('click', close)
-    }
+        setDropdownOpen(true);
+        site.addEventListener('click', close);
+    };
 
     const toggleDropdown = () => {
-        if (!dropdownOpen) open()
-    }
+        if (!dropdownOpen) open();
+    };
 
-    const path = location.pathname.split('/').join('')
+    const path = location.pathname.split('/').join('');
 
     return (
         <div className='nav-menu'>
@@ -59,8 +59,8 @@ const NavMenu = ({ options, location }) => {
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
 
-export default NavMenu
+export default NavMenu;

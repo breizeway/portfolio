@@ -1,9 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import '../styles/Projects.css'
-import Layout from '../components/Layout'
+import '../styles/Projects.css';
+import Layout from '../components/Layout';
 import MDXWrapper from '../components/MdxWrapper';
 
 
@@ -20,8 +20,8 @@ const Projects = ({ location, data }) => {
                 </MDXWrapper>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
 export const query = graphql`query {
     mdx(slug: { eq: "projects" }) {
@@ -35,4 +35,4 @@ export const query = graphql`query {
 }`;
 
 
-export default Projects
+export default Projects;
