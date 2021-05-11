@@ -44,7 +44,7 @@ body {
   margin: 0;
   background-color: var(--color__background);
   color: var(--color__text);
-  font-family: 'IBM Plex Mono', arial;
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
 }
 
 a {
@@ -59,5 +59,7 @@ h3 {
 }
 
 h4 {
-  display: inline-block;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
