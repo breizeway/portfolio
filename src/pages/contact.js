@@ -1,12 +1,23 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 import MDXWrapper from '../components/MdxWrapper';
 
 
-const Contact = ({ location, data }) => {
+const Contact = ({ location }) => {
+    const data = useStaticQuery(graphql`query {
+        mdx(slug: { eq: "contact" }) {
+            id
+            slug
+            body
+            frontmatter {
+                title
+            }
+        }
+    }`);
+
     const { body } = data.mdx;
 
     return (
@@ -19,19 +30,8 @@ const Contact = ({ location, data }) => {
                 </MDXWrapper>
             </div>
         </Layout>
-    )
-}
-
-export const query = graphql`query {
-    mdx(slug: { eq: "contact" }) {
-        id
-        slug
-        body
-        frontmatter {
-            title
-        }
-    }
-}`;
+    );
+};
 
 
-export default Contact
+export default Contact;

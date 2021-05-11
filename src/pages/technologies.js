@@ -1,13 +1,24 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import '../styles/Technologies.css'
-import Layout from '../components/Layout'
+import '../styles/Technologies.css';
+import Layout from '../components/Layout';
 import MDXWrapper from '../components/MdxWrapper';
 
 
-const Technologies = ({ location, data }) => {
+const Technologies = ({ location }) => {
+    const data = useStaticQuery(graphql`query {
+        mdx(slug: { eq: "technologies" }) {
+            id
+            slug
+            body
+            frontmatter {
+                title
+            }
+        }
+    }`);
+
     const { body } = data.mdx;
 
     return (
@@ -20,19 +31,8 @@ const Technologies = ({ location, data }) => {
                 </MDXWrapper>
             </div>
         </Layout>
-    )
-}
-
-export const query = graphql`query {
-    mdx(slug: { eq: "technologies" }) {
-        id
-        slug
-        body
-        frontmatter {
-            title
-        }
-    }
-}`;
+    );
+};
 
 
-export default Technologies
+export default Technologies;
