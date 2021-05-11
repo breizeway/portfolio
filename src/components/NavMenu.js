@@ -27,7 +27,7 @@ const NavMenu = ({ options, location }) => {
         if (!dropdownOpen) open()
     }
 
-    const path = location.pathname.replace('/', '')
+    const path = location.pathname.split('/').join('')
 
     return (
         <div className='nav-menu'>
