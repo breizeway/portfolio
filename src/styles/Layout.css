@@ -1,0 +1,15 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space__std);
+  width: 100%;
+  min-height: 100%;
+}
+
+.layout-content {
+  width: 100%;
+  max-width: var(--size__content-witdh);
+  flex-grow: 1;
+}

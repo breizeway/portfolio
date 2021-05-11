@@ -5,6 +5,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -13,7 +15,6 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 200,
-              marginLeft: 0,
             },
           },
         ],
@@ -34,9 +35,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `./src/markdown-pages/`,
+        path: `${__dirname}/src/markdown-pages/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /technologies/
+        }
+      }
+    },
   ],
 };
