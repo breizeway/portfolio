@@ -4,7 +4,7 @@ import '../styles/header.css';
 import NavMenu from '../components/nav-menu';
 
 
-const Header = ({ location }) => {
+const Header = ({ path }) => {
     const options = [
         'about',
         'contact',
@@ -16,7 +16,7 @@ const Header = ({ location }) => {
     return (
         <div className='header'>
             <h1 className='header__name'>Tannor Breitigam</h1>
-            <NavMenu options={options} location={location}/>
+            <NavMenu options={options} path={path}/>
         </div>
     );
 };
