@@ -3,6 +3,7 @@ module.exports = {
     title: `portfolio`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
@@ -28,7 +29,7 @@ module.exports = {
           google: [
             {
               family: `IBM Plex Mono`,
-              variants: [`300`, `400`, `500`, `600`, `700`],
+              variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`],
             },
           ],
         },

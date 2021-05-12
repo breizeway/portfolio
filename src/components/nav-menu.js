@@ -8,7 +8,7 @@ import Highlight2 from './nav-selected';
 const domAvailable = typeof document !== 'undefined';
 
 
-const NavMenu = ({ options, location }) => {
+const NavMenu = ({ options, path }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const site = domAvailable ? document.getElementById('___gatsby') : null;
@@ -27,26 +27,26 @@ const NavMenu = ({ options, location }) => {
         if (!dropdownOpen) open();
     };
 
-    const path = location.pathname.split('/').join('');
-
     return (
         <div className='nav-menu'>
-            <div
-                className='nav-menu__selected'
-                onClick={() => toggleDropdown()}
-                onKeyDown={() => toggleDropdown()}
-                role='button'
-                tabIndex='0'
-            >
-                <Highlight2 content={path} />
-                <div className='nav-menu__down-icon'>
-                    {dropdownOpen ? (
-                        <FaChevronUp />
-                    ) : (
-                        <FaChevronDown />
-                    )}
+            {path && (
+                <div
+                    className='nav-menu__selected'
+                    onClick={() => toggleDropdown()}
+                    onKeyDown={() => toggleDropdown()}
+                    role='button'
+                    tabIndex='0'
+                >
+                    <Highlight2 content={path} />
+                    <div className='nav-menu__down-icon'>
+                        {dropdownOpen ? (
+                            <FaChevronUp />
+                        ) : (
+                            <FaChevronDown />
+                        )}
+                    </div>
                 </div>
-            </div>
+            )}
             {dropdownOpen && (
                 <div className='nav-menu__dropdown'>
                     {options.map((option, key) => (
