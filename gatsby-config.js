@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `portfolio`,
+    title: `portfolio`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -50,5 +50,14 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Tannor Breitigam Portfolio`,
+        short_name: `portfolio`,
+        start_url: `/about`,
+        icon: `src/images/favicon/favicon.png`,
+      },
+    }
   ],
 };
