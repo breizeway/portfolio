@@ -14,13 +14,13 @@ Technologies Used
 I recently heard about [Gatsby](https://www.gatsbyjs.com/) as a great option for frontend, static, performant sites and decided to give it a try. 
 Along with Gatsby, I used a touch of [GraphQL](https://graphql.org/) to query the file system and insert `.mdx` files to insert Markdown for each page. For the actual HTML, I used React to generate HTML components with JSX. Finally, the site is hosted by Gatsby Cloud.
 
-With these technologies in place, I was excited that I was able to meet all my goals in one elegent package. The site took about 3 1/2 days from start to deployment.
+With these technologies in place, I was excited that I was able to meet all my goals in one elegant package. The site took about 3 1/2 days from start to deployment.
 
 Getting Started
 ---------------
 To set the project up:
 1. Clone the repository
-2. Run `npm isntall`
+2. Run `npm install`
 3. Run `npm run dev`
 4. Open the development site in your browser.
 
