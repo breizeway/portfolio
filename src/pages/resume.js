@@ -9,12 +9,7 @@ import MDXWrapper from '../components/mdx-wrapper';
 const Resume = ({ location }) => {
     const data = useStaticQuery(graphql`query {
         mdx(slug: { eq: "resume" }) {
-            id
-            slug
             body
-            frontmatter {
-                title
-            }
         }
     }`);
 
