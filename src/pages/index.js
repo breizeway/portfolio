@@ -13,12 +13,7 @@ const Index = ({ location }) => {
 
     const data = useStaticQuery(graphql`query {
         mdx(slug: { eq: "home" }) {
-            id
-            slug
             body
-            frontmatter {
-                title
-            }
         }
     }`);
 

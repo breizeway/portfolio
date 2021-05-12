@@ -10,12 +10,7 @@ import MDXWrapper from '../components/mdx-wrapper';
 const Projects = ({ location }) => {
     const data = useStaticQuery(graphql`query {
         mdx(slug: { eq: "projects" }) {
-            id
-            slug
             body
-            frontmatter {
-                title
-            }
         }
     }`);
 
