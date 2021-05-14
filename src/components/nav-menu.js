@@ -8,19 +8,19 @@ import NavSelected from './nav-selected';
 const domAvailable = typeof document !== 'undefined';
 
 
-const NavMenu = ({ options, path }) => {
+const NavMenu = ({ navOptions, path }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const site = domAvailable ? document.getElementById('___gatsby') : null;
+    const gatsbyWrapper = domAvailable ? document.getElementById('___gatsby') : null;
 
     const close = () => {
         setDropdownOpen(false);
-        site.removeEventListener('click', close);
+        gatsbyWrapper.removeEventListener('click', close);
     };
 
     const open = () => {
         setDropdownOpen(true);
-        site.addEventListener('click', close);
+        gatsbyWrapper.addEventListener('click', close);
     };
 
     const toggleDropdown = () => {
@@ -49,7 +49,7 @@ const NavMenu = ({ options, path }) => {
             )}
             {dropdownOpen && (
                 <div className='nav-menu__dropdown'>
-                    {options.map((option, key) => (
+                    {navOptions.map((option, key) => (
                         path !== option && (
                             <Link to={`/${option}`} key={key}>
                                 <NavSelected content={option}/>
