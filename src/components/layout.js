@@ -9,13 +9,13 @@ import Footer from './footer';
 const Layout = ({ children, location }) => {
     const allSlugs = useStaticQuery(graphql`query allSlugs {
         allSitePage(filter: {path: {nin: ["/dev-404-page/", "/404.html", "/404/", "/"]}}) {
-          edges {
-            node {
-              path
+            edges {
+                node {
+                    path
+                }
             }
-          }
         }
-      }`);
+    }`);
 
     const navOptions = allSlugs.allSitePage.edges.map(edge => edge.node.path.split('/').join(''));
 
