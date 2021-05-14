@@ -6,7 +6,10 @@ import Header from './header';
 import Footer from './footer';
 
 const Layout = ({ children, location }) => {
-    const path = location.pathname.split('/').join('');
+    let path = location.pathname.split('/').join('');
+    if (path === '404.html') {
+        path = '404'
+    }
 
     return (
         <div className='layout'>

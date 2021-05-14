@@ -3,7 +3,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'gatsby';
 
 import '../styles/nav-menu.css';
-import Highlight2 from './nav-selected';
+import NavSelected from './nav-selected';
 
 const domAvailable = typeof document !== 'undefined';
 
@@ -37,7 +37,7 @@ const NavMenu = ({ options, path }) => {
                     role='button'
                     tabIndex='0'
                 >
-                    <Highlight2 content={path} />
+                    <NavSelected content={path} />
                     <div className='nav-menu__down-icon'>
                         {dropdownOpen ? (
                             <FaChevronUp />
@@ -52,7 +52,7 @@ const NavMenu = ({ options, path }) => {
                     {options.map((option, key) => (
                         path !== option && (
                             <Link to={`/${option}`} key={key}>
-                                <Highlight2 content={option}/>
+                                <NavSelected content={option}/>
                             </Link>
                         )
                     ))}
