@@ -5,6 +5,9 @@
   --color__border: #ddd7c6;
   --color__accent: #f5bfbb;
   --color__accent-alt: #e29c9c;
+  --color__shadow: #dddddd;
+  --color__input: #ffffff;
+  --color__error: #bd0404;
 
   --space__std: 20px;
 
@@ -21,6 +24,8 @@
     --color__border: #455255;
     --color__accent: #d47467;
     --color__accent-alt: #d47467;
+    --color__shadow: #000000;
+    --color__input: #000000;
   }
 }
 
@@ -75,4 +80,41 @@ h5 {
 
 h6 {
   margin: 4px 0;
+}
+
+input, textArea, button, label {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input, textArea {
+  background-color: var(--color__input);
+  border: 3px solid var(--color__border);
+  padding: 6px 12px;
+  /* box-shadow: inset 0 3px var(--color__shadow); */
+}
+
+textArea {
+  max-width: var(--size__content-witdh);
+  /* min-width: var(--size__content-witdh); */
+  min-height: 100px;
+}
+
+label,
+button,
+.val-errors,
+.val-errors > div:not(.val-errors > div:first-child) {
+  margin-top: 12px;
+}
+
+button {
+  background-color: inherit;
+  border: 3px solid var(--color__text);
+  font-weight: bold;
+  min-height: 40px;
+}
+
+button:hover {
+  cursor: pointer;
 }
