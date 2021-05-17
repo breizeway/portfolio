@@ -20,7 +20,7 @@ const Layout = ({ children, location }) => {
     const navOptions = allSlugs.allSitePage.edges.map(edge => edge.node.path.split('/').join(''));
 
     let path = location.pathname.split('/').join('');
-    if (!navOptions.includes(path)) path = '404';
+    if (path && !navOptions.includes(path)) path = '404';
 
     return (
         <div className='layout'>
