@@ -22,7 +22,7 @@ To set the project up:
 1. Clone the repository
 2. Run `npm install`
 3. Run `npm run dev`
-4. Open the development site in your browser.
+4. Open the development site in your browser
 
 Deployment
 ----------
@@ -34,4 +34,4 @@ Other Odds & Ends
 - [Technologies](https://tannorbreitigam.com/technologies) icons were sourced from [Devicon](https://devicon.dev/). These were super helpful!
 - I discovered [React Icons](https://react-icons.github.io/react-icons) while building this. It's a convenient package for easily importing icons from a number of places. I was only using Font Awesome and adding each icon with an `<i>` tag before, so this was a great upgrade.
 - The site follows the system preference for light/dark modes. I plan to add a toggle in the future.
-- It was fun to learn a little bit about how GraphQL works. I only used it to select and insert markdown files, but hope to play around with it more in the future.
+- It was fun to learn a little bit about how GraphQL works. I used two queries in this site. One selects and insert markdown files into pages and the other selects all available pages (file names in `src/pages` for the navigation menu below the header. I definitely plan on playing around with it more in other projects.
