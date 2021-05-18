@@ -1,7 +1,14 @@
 .header {
-  margin-bottom: var(--space__std);
+  margin-bottom: var(--space__sml);
+  display: inline-block;
 }
 
 .header__name {
   margin-top: 0;
+}
+
+.header__name > a {
+  text-decoration: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
