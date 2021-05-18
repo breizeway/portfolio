@@ -38,7 +38,7 @@ const NavMenu = ({ navOptions, path }) => {
                     tabIndex='0'
                 >
                     <NavSelected content={path} />
-                    <div className='nav-menu__down-icon'>
+                    <div className='nav-menu__icon'>
                         {dropdownOpen ? (
                             <FaChevronUp />
                         ) : (

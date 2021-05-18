@@ -55,3 +55,22 @@
   margin-left: 5px;
   margin-top: 7px;
 }
+
+@media print {
+  .nav-selected__left,
+  .nav-selected__right,
+  .nav-selected__inner-left,
+  .nav-selected__inner-right,
+  .nav-menu__icon {
+    display: none;
+  }
+
+
+  .nav-selected__inner-main {
+    padding: 0;
+  }
+
+  .nav-selected__inner-main > h2 {
+    font-weight: bold;
+  }
+}
