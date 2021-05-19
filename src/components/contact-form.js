@@ -6,10 +6,9 @@ import '../styles/contact-form.css';
 
 const ContactForm = () => {
     const [state, handleSubmit] = useForm('mjvjyadj');
-    console.log('   :::STATE:::   ', state.errors);
 
     if (state.succeeded) {
-        return <p>Thanks for contacting me! You'll hear back from me soon.</p>;
+        return <p>Success! I'll review your email and get back to you as soon as I can.</p>;
     }
 
     return (
