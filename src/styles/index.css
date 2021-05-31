@@ -13,7 +13,7 @@
   --space__sml: 10px;
 
   --size__border: 3px;
-  --size__content-witdh: 600px;
+  --size__content-width: 600px;
 }
 
 
@@ -106,7 +106,7 @@ input, textArea {
 }
 
 textArea {
-  max-width: var(--size__content-witdh);
+  max-width: var(--size__content-width);
   min-height: 100px;
 }
 

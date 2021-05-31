@@ -2,7 +2,10 @@
 slug: projects
 ---
 
-import { Link } from 'gatsby'
+import { Link, Image } from 'gatsby'
+import v31GIF from './images/projects/v31.gif'
+import reedlyGIF from './images/projects/reedly.gif'
+import shipcampGIF from './images/projects/shipcamp.gif'
 
 ### Video Thirty One
 [live site](https://pick-list.herokuapp.com) | [Github](https://github.com/breizeway/picklist)
@@ -12,6 +15,8 @@ Video Thirty One is a book club for films where friends create and follow curate
 - Utilized pure CSS to develop a uniquely styled front end from the ground-up for a pleasant UX
 - Implemented a robust user authentication system using Flask-Login with extensive error handling
 
+<img src={v31GIF} />
+
 ### Reedly
 [live site](https://reedly.herokuapp.com/) | [Github](https://github.com/breizeway/reedly)
 
@@ -19,12 +24,16 @@ Reedly is an RSS feed aggregator that enables users to browse articles from site
 - Employed JavaScript with React and Redux on the front end and Python with Flask and SQLAlchemy on the back end to create a cohesive and fully functional feed aggregator
 - Leveraged FeedParser to translate RSS feeds into JSON allowing RSS data to consistently render on the front end
 
+<img src={reedlyGIF} />
+
 ### Shipcamp
 [live site](https://ship-camp.herokuapp.com/) | [Github](https://github.com/breizeway/ship-camp)
 
 Shipcamp is a clone of Hipcamp that allows users to view and book campsites on ships.
 - Applied JavaScript with React and Redux on the front end and Express and Sequelize on the back end
 - Incorporated AWS API to allow users to upload custom profile pictures providing for ownership of personal page
+
+<img src={shipcampGIF} />
 
 ### My portfolio site
 <p><Link to='/about'>live site</Link> | <a href='https://github.com/breizeway/portfolio'>GitHub</a></p>
