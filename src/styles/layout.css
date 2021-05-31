@@ -10,6 +10,6 @@
 
 .layout-content {
   width: 100%;
-  max-width: var(--size__content-witdh);
+  max-width: var(--size__content-width);
   flex-grow: 1;
 }

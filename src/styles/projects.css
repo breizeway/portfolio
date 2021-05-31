@@ -1,1 +1,4 @@
-
+img {
+  max-width: var(--size__content-width);
+  margin-bottom: var(--space__std)
+}
