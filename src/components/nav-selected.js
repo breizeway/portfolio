@@ -20,5 +20,4 @@ const NavSelected = ({ content }) => {
 };
 
 
-
 export default NavSelected;
