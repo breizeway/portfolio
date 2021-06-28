@@ -58,6 +58,14 @@ module.exports = {
         start_url: `/about`,
         icon: `src/images/favicon/favicon.png`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-GDY7Y2SJH9'
+        ],
+      },
+    },
   ],
 };
