@@ -28,7 +28,7 @@ const NavMenu = ({ navOptions, path }) => {
     };
 
     return (
-        <div className='nav-menu'>
+        <nav className='nav-menu'>
             {path && (
                 <div
                     className='nav-menu__selected'
@@ -58,7 +58,7 @@ const NavMenu = ({ navOptions, path }) => {
                     ))}
                 </div>
             )}
-        </div>
+        </nav>
     );
 };
 
