@@ -1,40 +1,45 @@
-import React from 'react';
-import Helmet from "react-helmet"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import Helmet from "react-helmet";
 
-import '../styles/layout.css';
-import Header from './header';
-import Footer from './footer';
+import "../styles/layout.css";
+import Footer from "./footer";
+import Header from "./header";
 
 const Layout = ({ children, location }) => {
-    const allSlugs = useStaticQuery(graphql`query allSlugs {
-        allSitePage(filter: {path: {nin: ["/dev-404-page/", "/404.html", "/404/", "/"]}}) {
-            edges {
-                node {
-                    path
-                }
-            }
+  const allSlugs = useStaticQuery(graphql`
+    query allSlugs {
+      allSitePage(
+        filter: { path: { nin: ["/dev-404-page/", "/404.html", "/404/", "/"] } }
+      ) {
+        edges {
+          node {
+            path
+          }
         }
-    }`);
+      }
+    }
+  `);
 
-    const navOptions = allSlugs.allSitePage.edges.map(edge => edge.node.path.split('/').join(''));
+  const navOptions = allSlugs.allSitePage.edges.map((edge) =>
+    edge.node.path.split("/").join("")
+  );
 
-    let path = location.pathname.split('/').join('');
-    if (path && !navOptions.includes(path)) path = '404';
+  let title = location.pathname.slice(1) || "home";
+  if (title !== "home" && !navOptions.includes(title)) title = "404";
 
-    return (
-        <div className='layout'>
-            <Helmet>
-                <title>{path}</title>
-            </Helmet>
-            <div className='layout-content'>
-                <Header path={path} navOptions={navOptions} />
-                {children}
-            </div>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="layout">
+      <Helmet>
+        <title>{`${title} | tannor.net`}</title>
+      </Helmet>
+      <div className="layout-content">
+        <Header />
+        {children}
+      </div>
+      <Footer />
+    </div>
+  );
 };
-
 
 export default Layout;

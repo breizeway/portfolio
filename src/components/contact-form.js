@@ -1,69 +1,59 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
+import React, { useEffect } from "react";
 
-import '../styles/contact-form.css';
-
+import "../styles/contact-form.css";
+import { Loading } from "./loading";
 
 const ContactForm = () => {
-    const [state, handleSubmit] = useForm('mjvjyadj');
+  const [state, handleSubmit] = useForm("mjvjyadj");
 
-    if (state.succeeded) {
-        return <p>Success! I'll get back to you as soon as I can.</p>;
+  useEffect(() => {
+    if (!state.submitting && state.succeeded) {
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
     }
+  }, [state]);
 
-    return (
-        <>
-            <form
-                onSubmit={handleSubmit}
-                className='contact-form'
-            >
-                <div>
-                    <label htmlFor='email'>
-                        Email Address
-                    </label>
-                    <input
-                        id='email'
-                        type='email'
-                        name='email'
-                    />
-                    <ValidationError
-                        prefix='Email'
-                        field='email'
-                        errors={state.errors}
-                    />
-                </div>
-                <div>
-                    <label htmlFor='message'>
-                        Message
-                    </label>
-                    <textarea
-                        id='message'
-                        name='message'
-                    />
-                    <ValidationError
-                        prefix='Message'
-                        field='message'
-                        errors={state.errors}
-                    />
-                </div>
-                {state.errors.length !== 0 && (
-                    <div className='val-errors'>
-                        {state.errors.map((error, index) => (
-                            <p key={index}>
-                                {error.message}
-                            </p>
-                        ))}
-                    </div>
-                )}
-                <div>
-                    <button type='submit' disabled={state.submitting}>
-                        Send
-                    </button>
-                </div>
-            </form>
-            <br />
-        </>
-    );
-}
+  return (
+    <>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div>
+          <label htmlFor="email">your email address</label>
+          <input id="email" type="email" name="email" />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </div>
+        <div>
+          <label htmlFor="message">a brief message</label>
+          <textarea id="message" name="message" />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+        </div>
+        {state.errors.length !== 0 && (
+          <div className="val-errors">
+            {state.errors.map((error, index) => (
+              <p key={index}>{error.message}</p>
+            ))}
+          </div>
+        )}
+        <div>
+          <button type="submit" disabled={state.submitting}>
+            send
+          </button>
+        </div>
+        <Loading
+          isLoading={state.submitting}
+          loadingMessage="Sending"
+          isSuccess={state.succeeded}
+          successMessage="Sent!"
+          className="contact-form__loading"
+        />
+      </form>
+      <br />
+    </>
+  );
+};
 
 export default ContactForm;

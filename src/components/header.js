@@ -1,22 +1,15 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
+import React from "react";
+import "../styles/header.css";
 
-
-import '../styles/header.css';
-import NavMenu from '../components/nav-menu';
-
-const Header = ({ path, navOptions }) => {
-    return (
-        <div className='header'>
-            <h1
-                className='header__name'
-            >
-                <Link to='/about'>Tannor Breitigam</Link>
-            </h1>
-            <NavMenu navOptions={navOptions} path={path}/>
-        </div>
-    );
+const Header = () => {
+  return (
+    <div className="header">
+      <h1 className="header__name">
+        <Link to="/">Tannor Breitigam</Link>
+      </h1>
+    </div>
+  );
 };
-
 
 export default Header;
