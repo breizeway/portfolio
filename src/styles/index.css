@@ -19,7 +19,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color__background: #23292b;
-    --color__text: #fdf6e3;
+    --color__text: #e6dec8;
+    --color__text-bright: #fff6df;
     --color__text-light: #69665d;
     --color__border: #455255;
     --color__shadow: #000000;
@@ -52,7 +53,6 @@ body {
 
 a {
   color: var(--color__theme-2);
-  font-weight: bold;
 }
 
 h1 {
@@ -162,4 +162,8 @@ ul li:before {
 
   margin-left: -1.2em;
   width: 1.2em;
+}
+
+strong {
+  color: var(--color__text-bright);
 }
