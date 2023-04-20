@@ -3,8 +3,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Layout from "../components/layout";
 import MDXWrapper from "../components/mdx-wrapper";
-import "../styles/home.css";
 import "../styles/index.css";
+import "./home.css";
 
 const Home = ({ location }) => {
   const data = useStaticQuery(graphql`

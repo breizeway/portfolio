@@ -1,6 +1,6 @@
 .home .gatsby-resp-image-wrapper {
   margin: 0 !important;
-  box-shadow: 6px 6px var(--color__accent-alt);
+  box-shadow: 6px 6px var(--color__theme-1);
   border: 1px solid var(--color__text);
   max-width: 200px !important;
 }

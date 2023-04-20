@@ -1,8 +1,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 import React, { useEffect } from "react";
-
-import "../styles/contact-form.css";
-import { Loading } from "./loading";
+import { Loader } from "../loader";
+import "./contact-form.css";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mjvjyadj");
@@ -43,7 +42,7 @@ const ContactForm = () => {
             send
           </button>
         </div>
-        <Loading
+        <Loader
           isLoading={state.submitting}
           loadingMessage="Sending"
           isSuccess={state.succeeded}

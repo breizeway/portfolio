@@ -1,10 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import Helmet from "react-helmet";
-
-import "../styles/layout.css";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "../footer";
+import Header from "../header";
+import "./layout.css";
 
 const Layout = ({ children, location }) => {
   const allSlugs = useStaticQuery(graphql`
@@ -25,13 +24,15 @@ const Layout = ({ children, location }) => {
     edge.node.path.split("/").join("")
   );
 
-  let title = location.pathname.slice(1) || "home";
-  if (title !== "home" && !navOptions.includes(title)) title = "404";
+  let page = location.pathname.slice(1) || "home";
+  if (page !== "home" && !navOptions.includes(page)) page = "404";
+
+  const siteName = location.origin.split("//")[1];
 
   return (
     <div className="layout">
       <Helmet>
-        <title>{`${title} | tannor.net`}</title>
+        <title>{`${page} | ${siteName}`}</title>
       </Helmet>
       <div className="layout-content">
         <Header />

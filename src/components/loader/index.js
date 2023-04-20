@@ -1,6 +1,8 @@
+import classNames from "classnames";
 import React, { useEffect, useState } from "react";
+import "./loader.css";
 
-export const Loading = ({
+export const Loader = ({
   isLoading,
   loadingMessage,
   isSuccess,
@@ -38,7 +40,7 @@ export const Loading = ({
 
     if (!isLoading && isSuccess) {
       setShowSuccess(true);
-      setTimeout(deactivateSuccess, 4000);
+      setTimeout(deactivateSuccess, 5000);
     }
 
     return () => clearTimeout(deactivateSuccess);
@@ -47,7 +49,7 @@ export const Loading = ({
   return (
     <>
       {showLoading || showSuccess ? (
-        <div className={className || ""}>
+        <div className={classNames("loader", { [className]: !!className })}>
           {showLoading && loadingMessage + ".".repeat(numDots)}
           {showSuccess && successMessage}
         </div>
