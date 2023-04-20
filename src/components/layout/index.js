@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => {
     edge.node.path.split("/").join("")
   );
 
-  let page = location.pathname.slice(1) || "home";
+  let page = (location.pathname || "/").slice(1) || "home";
   if (page !== "home" && !navOptions.includes(page)) page = "404";
 
   const siteName = (location.origin || "//").split("//")[1];
