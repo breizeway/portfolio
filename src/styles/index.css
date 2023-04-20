@@ -3,19 +3,18 @@
   --color__text: #073642;
   --color__text-light: #92a9af;
   --color__border: #ddd7c6;
-  --color__accent: #f5bfbb;
-  --color__accent-alt: #e29c9c;
+  --color__theme-1: #e29c9c;
+  --color__theme-2: #7a9872;
   --color__shadow: #dddddd;
   --color__input: #ffffff;
   --color__error: #bd0404;
 
-  --space__std: 20px;
-  --space__sml: 10px;
+  --space__std: 2rem;
+  --space__sml: 1rem;
 
   --size__border: 3px;
   --size__content-width: 600px;
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,8 +22,6 @@
     --color__text: #fdf6e3;
     --color__text-light: #69665d;
     --color__border: #455255;
-    --color__accent: #d47467;
-    --color__accent-alt: #d47467;
     --color__shadow: #000000;
     --color__input: #000000;
   }
@@ -50,22 +47,31 @@ body {
   margin: 0;
   background-color: var(--color__background);
   color: var(--color__text);
-  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
 }
 
 a {
-  color: var(--color__accent-alt);
+  color: var(--color__theme-2);
   font-weight: bold;
 }
 
-h1, h2 {
+h1 {
+  font-size: 2.6rem;
   font-weight: normal;
 }
 
-h3 {
-  border-bottom: var(--size__border) solid var(--color__accent);
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: var(--size__border) solid var(--color__theme-1);
   display: inline-block;
-  margin: 10px 0;
+  /* margin: 10px 0; */
+}
+
+h3 {
+  color: var(--color__theme-1);
+  /* opacity: 0.8; */
+  font-size: 1.6rem;
 }
 
 h4 {
@@ -83,13 +89,16 @@ h6 {
   margin: 4px 0;
 }
 
-input, textArea, button, label {
+input,
+textArea,
+button,
+label {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
 
-input[type=email],
+input[type="email"],
 input[type_text],
 textArea {
   -webkit-appearance: none;
@@ -97,7 +106,8 @@ textArea {
   appearance: none;
 }
 
-input, textArea {
+input,
+textArea {
   background-color: var(--color__input);
   border: 3px solid var(--color__border);
   padding: 6px;
@@ -119,6 +129,9 @@ button,
 
 label {
   margin-left: 3px;
+  font-weight: bold;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 button {
@@ -130,4 +143,23 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+ul li {
+  /* color: black; */
+  list-style-type: none;
+  margin-top: 0.4em;
+  /* margin-bottom: 0.5em; */
+}
+
+ul li:before {
+  content: "\2022";
+  color: var(--color__theme-1);
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 0.85em;
+  float: left;
+
+  margin-left: -1.2em;
+  width: 1.2em;
 }

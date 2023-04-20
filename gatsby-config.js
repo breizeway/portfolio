@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `portfolio`
+    title: `portfolio`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,25 +46,23 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /technologies/
-        }
-      }
+          include: "/",
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tannor Breitigam Portfolio`,
-        short_name: `portfolio`,
-        start_url: `/about`,
+        name: `Tannor Breitigam`,
+        short_name: `Tannor`,
+        start_url: `/`,
         icon: `src/images/favicon/favicon.png`,
       },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          'G-GDY7Y2SJH9'
-        ],
+        trackingIds: ["G-GDY7Y2SJH9"],
       },
     },
   ],

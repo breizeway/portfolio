@@ -3,3 +3,7 @@
   flex-direction: column;
   max-width: 100%;
 }
+
+.contact-form__loading {
+  margin-top: 12px;
+}
