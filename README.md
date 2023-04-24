@@ -9,8 +9,8 @@ I originally built this site fresh out of App Academy and thought it would be co
 
 ## Technologies Used
 
-- [Gatsby](https://www.gatsbyjs.com/) as a great option for frontend, static, performant sites and decided to give it a try.
-- a touch of [GraphQL](https://graphql.org/) to query the file system and insert `.mdx` files to insert Markdown
+- [Gatsby](https://www.gatsbyjs.com/) as an option for a lightweight and performant react sites
+- a touch of [GraphQL](https://graphql.org/) to query the file
 - hosted with Gatsby Cloud.
 
 ## Getting Started
@@ -20,7 +20,7 @@ To set the project up:
 1. Clone the repository
 2. Run `npm install`
 3. Run `npm run dev`
-4. Open the development site in your browser
+4. Open the development site in your browser at [localhost:8000](http://localhost:8000/)
 
 ## Deployment
 
