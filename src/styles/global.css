@@ -28,6 +28,12 @@
   }
 }
 
+@font-face {
+  font-family: "iA Writer Duo";
+  font-style: normal;
+  src: url(/fonts/ia-writer-duo.ttf) format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -48,7 +54,7 @@ body {
   margin: 0;
   background-color: var(--color__background);
   color: var(--color__text);
-  font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
+  font-family: "iA Writer Duo", "Courier New", Courier, monospace;
 }
 
 a {
