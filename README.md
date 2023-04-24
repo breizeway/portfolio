@@ -13,7 +13,7 @@ I originally built this site fresh out of App Academy and thought it would be co
 - a touch of [GraphQL](https://graphql.org/) to query the file
 - hosted with Gatsby Cloud.
 
-## Getting Started
+## Dev Instructions
 
 To set the project up:
 
@@ -22,6 +22,6 @@ To set the project up:
 3. Run `npm run dev`
 4. Open the development site in your browser at [localhost:8000](http://localhost:8000/)
 
-## Deployment
+### Deployment
 
 Builds are automated with Gatsby Cloud, which checks pull requests to ensure a successful build. Merged pull requests to `main` to deploy to prod.
