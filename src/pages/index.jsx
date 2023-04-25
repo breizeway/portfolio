@@ -1,7 +1,6 @@
 import React from "react";
 import { Head as _Head } from "../components/head";
 import MdxHome from "../markdown-pages/home.mdx";
-import "../styles/global.css";
 import "./index.css";
 
 const Home = () => {
