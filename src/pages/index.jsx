@@ -11,3 +11,4 @@ const Home = () => {
 };
 
 export default Home;
+export { Head } from "../components/head";
