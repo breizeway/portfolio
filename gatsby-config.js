@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `portfolio`,
+    title: `Personal Site`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
@@ -23,31 +22,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: `IBM Plex Mono`,
-              variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`],
-            },
-          ],
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/src/markdown-pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-react-svg`,
-      options: {
-        rule: {
-          include: "/",
-        },
       },
     },
     {
@@ -59,11 +37,8 @@ module.exports = {
         icon: `src/images/favicon/favicon.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["G-GDY7Y2SJH9"],
-      },
-    },
   ],
+  flags: {
+    DEV_SSR: true,
+  },
 };
