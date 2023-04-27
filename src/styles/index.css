@@ -69,14 +69,12 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
-  border-bottom: var(--size__border) solid var(--color__theme-1);
+  text-decoration: underline var(--color__theme-1) solid 6px;
   display: inline-block;
-  /* margin: 10px 0; */
 }
 
 h3 {
   color: var(--color__theme-1);
-  /* opacity: 0.8; */
   font-size: 1.6rem;
 }
 
@@ -152,10 +150,8 @@ button:hover {
 }
 
 ul li {
-  /* color: black; */
   list-style-type: none;
   margin-top: 0.4em;
-  /* margin-bottom: 0.5em; */
 }
 
 ul li:before {
@@ -165,7 +161,6 @@ ul li:before {
   font-size: 1.4em;
   line-height: 0.85em;
   float: left;
-
   margin-left: -1.2em;
   width: 1.2em;
 }
