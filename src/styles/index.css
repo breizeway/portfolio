@@ -165,8 +165,8 @@ ul li:before {
   content: "\2022";
   color: var(--color__theme-1);
   font-weight: bold;
-  font-size: 1.4em;
-  line-height: 0.85em;
+  font-size: 1.7em;
+  line-height: 0.7em;
   float: left;
   margin-left: -1.2em;
   width: 1.2em;
