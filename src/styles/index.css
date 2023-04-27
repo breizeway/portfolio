@@ -69,7 +69,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
-  text-decoration: underline var(--color__theme-1) solid 6px;
+  text-decoration: underline var(--color__theme-1) solid /* 6px */;
   /* thickness shorthand not yet supported in safari */
   text-decoration-thickness: 6px;
   display: inline-block;
