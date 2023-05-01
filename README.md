@@ -1,7 +1,7 @@
 # My Personal Site
 
 The live site is at [tannor.net](https://tannor.net), but
-[tannorbreitigam.com](https://tannorbreitigam.com) works too (maybe? the redirect is not working yet).
+[tannorbreitigam.com](http://tannorbreitigam.com) works too (maybe? the redirect is not working yet).
 
 ## About
 
