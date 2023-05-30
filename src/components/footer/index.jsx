@@ -4,8 +4,8 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <a href="https://github.com/breizeway/portfolio">about this site</a> | ©
-      Tannor Breitigam {new Date().getFullYear()}
+      <a href="https://github.com/breizeway/portfolio">about this site</a> | ©{" "}
+      {new Date().getFullYear()} Tannor Breitigam
     </footer>
   );
 };
