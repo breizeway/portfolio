@@ -67,14 +67,10 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
 
-  /* text-decoration: underline var(--color__theme-1) solid 6px */
-  /* thickness shorthand not yet supported in safari */
   text-decoration-line: underline;
   text-decoration-color: var(--color__theme-1);
   text-decoration-style: solid;
   text-decoration-thickness: var(--space__sm);
-
-  display: inline-block;
 }
 
 h3 {
@@ -111,14 +107,6 @@ label {
   font-family: inherit;
   font-size: inherit;
 }
-
-/* input[type="email"],
-input[type_text],
-textArea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-} */
 
 input,
 textArea {
@@ -162,9 +150,9 @@ ul li:before {
   content: "\2022";
   color: var(--color__theme-1);
   font-weight: bold;
+  float: left;
   font-size: 1.7em;
   line-height: 0.7em;
-  float: left;
   margin-left: -1.2em;
   width: 1.2em;
 }
