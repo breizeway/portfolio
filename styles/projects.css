@@ -5,7 +5,7 @@
   gap: 2rem;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 400px) {
   .projects {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
