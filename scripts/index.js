@@ -59,3 +59,14 @@ contactForm.onsubmit = async (e) => {
 };
 
 document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+
+document.getElementById("know-more-heading").onclick = () => {
+  document
+    .getElementById("know-more-gif")
+    .classList.add("know-more-gif__visible");
+  setTimeout(() => {
+    document
+      .getElementById("know-more-gif")
+      .classList.remove("know-more-gif__visible");
+  }, 6000);
+};

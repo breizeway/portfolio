@@ -168,3 +168,11 @@ img {
   width: 100%;
   max-width: 200px;
 }
+
+#know-more-gif {
+  display: none;
+}
+
+#know-more-gif.know-more-gif__visible {
+  display: block;
+}
