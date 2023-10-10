@@ -1,6 +1,8 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "editor.foldingImportsByDefault": true
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000cc",
+    "titleBar.activeBackground": "#e29c9c",
+    "titleBar.inactiveBackground": "#e29c9ccc"
+  }
 }
