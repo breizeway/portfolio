@@ -1,4 +1,5 @@
 @import "contact-form.css";
+@import "fonts.css";
 @import "footer.css";
 @import "projects.css";
 @import "site-container.css";
@@ -35,57 +36,26 @@
   }
 }
 
-@font-face {
-  font-family: "iA Writer Duo";
-  src: url("../assets/fonts/ia-writer-duo/regular.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/regular.woff") format("woff");
-}
-@font-face {
-  font-family: "iA Writer Duo";
-  font-weight: bold;
-  src: url("../assets/fonts/ia-writer-duo/bold.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/bold.woff") format("woff");
-}
-@font-face {
-  font-family: "iA Writer Duo";
-  font-style: italic;
-  src: url("../assets/fonts/ia-writer-duo/italic.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/italic.woff") format("woff");
-}
-@font-face {
-  font-family: "iA Writer Duo";
-  font-style: oblique;
-  src: url("../assets/fonts/ia-writer-duo/italic.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/italic.woff") format("woff");
-}
-@font-face {
-  font-family: "iA Writer Duo";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../assets/fonts/ia-writer-duo/bold-italic.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/bold-italic.woff") format("woff");
-}
-@font-face {
-  font-family: "iA Writer Duo";
-  font-weight: bold;
-  font-style: oblique;
-  src: url("../assets/fonts/ia-writer-duo/bold-italic.woff2") format("woff2"),
-    url("../assets/fonts/ia-writer-duo/bold-italic.woff") format("woff");
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background-color: var(--color__background);
+  font-family: "iA Writer Quattro", sans-serif;
   color: var(--color__text);
-  font-family: "iA Writer Duo", "Courier New", Courier, monospace;
+  background-color: var(--color__background);
+  margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
 a {
-  color: var(--color__theme-2);
+  font-family: "iA Writer Duo", monospace;
 }
 
 h1 {
@@ -127,6 +97,12 @@ h6 {
   margin: var(--space__sm) 0;
 }
 
+a {
+  color: var(--color__theme-2);
+  font-weight: 600;
+  text-decoration-thickness: var(--space__xxs);
+}
+
 input,
 textArea,
 button,
@@ -136,13 +112,13 @@ label {
   font-size: inherit;
 }
 
-input[type="email"],
+/* input[type="email"],
 input[type_text],
 textArea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+} */
 
 input,
 textArea {
