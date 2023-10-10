@@ -4,3 +4,8 @@
   grid-auto-rows: auto;
   gap: 2rem;
 }
+
+/* .project-image {
+  box-shadow: 6px 6px var(--color__theme-1);
+  border: 1px solid var(--color__text);
+} */

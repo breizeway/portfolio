@@ -1,0 +1,27 @@
+#site-container {
+  min-height: 100dvh;
+  width: 100vw;
+  padding: var(--space__std);
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--size__content-width);
+}
+
+header,
+footer {
+  flex-grow: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header > h1 {
+  margin-top: 0;
+}
