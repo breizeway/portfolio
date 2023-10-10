@@ -1,3 +1,8 @@
+@import "site-container.css";
+@import "projects.css";
+@import "contact-form.css";
+@import "footer.css";
+
 :root {
   --color__background: #fdf6e3;
   --color__text: #073642;
@@ -14,6 +19,8 @@
 
   --size__border: 3px;
   --size__content-width: 600px;
+
+  --text-size__h1: 2.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,23 +38,31 @@
 @font-face {
   font-family: "iA Writer Duo";
   font-style: normal;
-  src: url(/fonts/ia-writer-duo.ttf) format("truetype");
+  src: url("../assets/fonts/ia-writer-duo/regular.woff2") format("woff2"),
+    url("../assets/fonts/ia-writer-duo/regular.woff") format("woff");
+}
+@font-face {
+  font-family: "iA Writer Duo";
+  font-weight: bold;
+  src: url("../assets/fonts/ia-writer-duo/bold.woff2") format("woff2"),
+    url("../assets/fonts/ia-writer-duo/bold.woff") format("woff");
+}
+@font-face {
+  font-family: "iA Writer Duo";
+  font-style: italic, oblique;
+  src: url("../assets/fonts/ia-writer-duo/italic.woff2") format("woff2"),
+    url("../assets/fonts/ia-writer-duo/italic.woff") format("woff");
+}
+@font-face {
+  font-family: "iA Writer Duo";
+  font-weight: bold;
+  font-style: italic, oblique;
+  src: url("../assets/fonts/ia-writer-duo/bold-italic.woff2") format("woff2"),
+    url("../assets/fonts/ia-writer-duo/bold-italic.woff") format("woff");
 }
 
 * {
   box-sizing: border-box;
-}
-
-*:focus {
-  outline: none;
-}
-
-html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper {
-  width: 100%;
-  height: 100%;
 }
 
 body {
@@ -173,5 +188,12 @@ ul li:before {
 }
 
 strong {
+  font-weight: bolder;
   color: var(--color__text-bright);
+}
+
+img {
+  box-shadow: 6px 6px var(--color__theme-1);
+  border: 1px solid var(--color__text);
+  max-width: 200px !important;
 }
