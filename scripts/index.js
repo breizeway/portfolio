@@ -57,3 +57,5 @@ contactForm.onsubmit = async (e) => {
     formStatus.innerHTML = "Oops! There was a problem submitting your form";
   }
 };
+
+document.getElementById("copyright-year").innerHTML = new Date().getFullYear();

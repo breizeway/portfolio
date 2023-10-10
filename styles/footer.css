@@ -1,6 +1,6 @@
 footer {
-  margin-top: var(--space__std);
-  padding-top: var(--space__std);
+  margin-top: var(--space__lg);
+  padding-top: var(--space);
   border-top: 1px solid var(--color__text-light);
   color: var(--color__text-light);
   font-size: smaller;

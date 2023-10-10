@@ -23,11 +23,11 @@
       href="assets/images/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-    <link
+    <!-- <link
       rel="mask-icon"
       href="assets/images/favicon/safari-pinned-tab.svg"
       color="#e29c9c"
-    />
+    /> -->
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
     <meta name="msapplication-TileColor" content="#e29c9c" />
     <meta
@@ -260,21 +260,12 @@
           <p>Send me an email 👇</p>
           <form id="contact-form">
             <div>
-              <label for="email">your email address</label>
-              <input
-                class="contact-form__field"
-                id="email"
-                type="email"
-                name="email"
-              />
+              <label for="contact-form__email">your email address</label>
+              <input id="contact-form__email" type="email" name="email" />
             </div>
             <div>
-              <label for="message">a brief message</label>
-              <textarea
-                class="contact-form__field"
-                id="message"
-                name="message"
-              ></textarea>
+              <label for="contact-form__message">a brief message</label>
+              <textarea id="contact-form__message" name="message"></textarea>
             </div>
             <p id="contact-form__status"></p>
             <div>
@@ -285,11 +276,7 @@
 
         <footer>
           <a href="https://github.com/breizeway/portfolio">about this site</a> |
-          ©
-          <script type="text/javascript">
-            document.write(new Date().getFullYear());
-          </script>
-          Tannor Breitigam
+          © <span id="copyright-year"></span> Tannor Breitigam
         </footer>
       </div>
     </div>

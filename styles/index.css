@@ -1,7 +1,7 @@
-@import "site-container.css";
-@import "projects.css";
 @import "contact-form.css";
 @import "footer.css";
+@import "projects.css";
+@import "site-container.css";
 
 :root {
   --color__background: #fdf6e3;
@@ -14,13 +14,13 @@
   --color__input: #ffffff;
   --color__error: #bd0404;
 
-  --space__std: 2rem;
-  --space__sml: 1rem;
+  --space__lg: 2.4rem;
+  --space: 1.2rem;
+  --space__sm: 0.4rem;
+  --space__xs: 0.2rem;
+  --space__xxs: 0.1rem;
 
-  --size__border: 3px;
-  --size__content-width: 600px;
-
-  --text-size__h1: 2.6rem;
+  --max-content-width: 600px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,7 +102,7 @@ h2 {
   text-decoration-line: underline;
   text-decoration-color: var(--color__theme-1);
   text-decoration-style: solid;
-  text-decoration-thickness: 6px;
+  text-decoration-thickness: var(--space__sm);
 
   display: inline-block;
 }
@@ -116,15 +116,15 @@ h4 {
   font-style: italic;
   font-weight: 700;
   font-size: 1.1rem;
-  margin: 8px 0;
+  margin: var(--space__sm) 0;
 }
 
 h5 {
-  margin: 6px 0;
+  margin: var(--space__sm) 0;
 }
 
 h6 {
-  margin: 4px 0;
+  margin: var(--space__sm) 0;
 }
 
 input,
@@ -147,26 +147,20 @@ textArea {
 input,
 textArea {
   background-color: var(--color__input);
-  border: 3px solid var(--color__border);
-  padding: 6px;
+  border: var(--space__xs) solid var(--color__border);
+  padding: var(--space__sm);
   box-shadow: none;
   border-radius: 0;
 }
 
 textArea {
-  max-width: var(--size__content-width);
-  min-height: 100px;
-}
-
-label,
-button,
-.val-errors,
-.val-errors > div:not(.val-errors > div:first-child) {
-  margin-top: 12px;
+  max-width: var(--max-content-width);
+  min-height: 8rem;
 }
 
 label {
-  margin-left: 3px;
+  margin-left: var(--space__sm);
+  margin-top: var(--space__sm);
   font-weight: bold;
   opacity: 0.6;
   font-size: 0.9rem;
@@ -174,9 +168,9 @@ label {
 
 button {
   background-color: inherit;
-  border: 3px solid var(--color__text);
   font-weight: bold;
-  min-height: 40px;
+  border: var(--space__xs) solid var(--color__text);
+  padding: var(--space__sm);
 }
 
 button:hover {
@@ -185,7 +179,7 @@ button:hover {
 
 ul li {
   list-style-type: none;
-  margin-top: 0.4em;
+  margin-top: var(--space__sm);
 }
 
 ul li:before {
@@ -205,8 +199,8 @@ strong {
 }
 
 img {
-  box-shadow: 6px 6px var(--color__theme-1);
-  border: 1px solid var(--color__text);
+  box-shadow: var(--space__sm) var(--space__sm) var(--color__theme-1);
+  border: var(--space__xxs) solid var(--color__text);
   width: 100%;
   max-width: 200px;
 }
