@@ -62,11 +62,11 @@ document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
 
 document.getElementById("know-more-heading").onclick = () => {
   document
-    .getElementById("know-more-gif")
-    .classList.add("know-more-gif__visible");
+    .getElementById("know-more-gif-wrapper")
+    .classList.add("know-more-gif--visible");
   setTimeout(() => {
     document
-      .getElementById("know-more-gif")
-      .classList.remove("know-more-gif__visible");
-  }, 6000);
+      .getElementById("know-more-gif-wrapper")
+      .classList.remove("know-more-gif--visible");
+  }, 4000);
 };

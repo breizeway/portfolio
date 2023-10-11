@@ -81,15 +81,17 @@ h3 {
 h4 {
   font-style: italic;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: var(--space__sm) 0;
 }
 
 h5 {
+  font-size: 1.2rem;
   margin: var(--space__sm) 0;
 }
 
 h6 {
+  font-size: 1.1rem;
   margin: var(--space__sm) 0;
 }
 
@@ -169,10 +171,10 @@ img {
   max-width: 200px;
 }
 
-#know-more-gif {
+#know-more-gif-wrapper {
   display: none;
 }
 
-#know-more-gif.know-more-gif__visible {
+#know-more-gif-wrapper.know-more-gif--visible {
   display: block;
 }
