@@ -60,11 +60,13 @@ a {
 
 h1 {
   font-size: 2.6rem;
+  color: var(--color__text-bright);
   font-weight: normal;
 }
 
 h2 {
   font-size: 2rem;
+  color: var(--color__text-bright);
   font-weight: bold;
   margin-top: var(--space__lg);
 
@@ -75,24 +77,27 @@ h2 {
 }
 
 h3 {
-  color: var(--color__theme-1);
   font-size: 1.6rem;
+  color: var(--color__theme-1);
 }
 
 h4 {
+  font-size: 1.3rem;
+  color: var(--color__text-bright);
   font-style: italic;
   font-weight: 700;
-  font-size: 1.3rem;
   margin: var(--space__sm) 0;
 }
 
 h5 {
   font-size: 1.2rem;
+  color: var(--color__text-bright);
   margin: var(--space__sm) 0;
 }
 
 h6 {
   font-size: 1.1rem;
+  color: var(--color__text-bright);
   margin: var(--space__sm) 0;
 }
 
