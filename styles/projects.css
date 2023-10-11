@@ -1,13 +1,21 @@
-.projects {
+#projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: auto;
   gap: var(--space__lg);
 }
 
-@media (max-width: 400px) {
-  .projects {
+.projects__span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 476px) {
+  #projects {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: var(--space);
+  }
+
+  .projects__span-2 {
+    grid-column: span 1;
   }
 }
