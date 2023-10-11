@@ -126,7 +126,7 @@ textArea {
 }
 
 textArea {
-  max-width: var(--max-content-width);
+  resize: vertical;
   min-height: 8rem;
 }
 
