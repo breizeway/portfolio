@@ -61,12 +61,8 @@ contactForm.onsubmit = async (e) => {
 document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
 
 document.getElementById("know-more-heading").onclick = () => {
-  document
-    .getElementById("know-more-gif-wrapper")
-    .classList.add("know-more-gif--visible");
+  document.getElementById("know-more-gif").classList.add("visible");
   setTimeout(() => {
-    document
-      .getElementById("know-more-gif-wrapper")
-      .classList.remove("know-more-gif--visible");
+    document.getElementById("know-more-gif").classList.remove("visible");
   }, 4000);
 };

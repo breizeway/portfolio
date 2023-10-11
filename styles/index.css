@@ -66,6 +66,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: var(--space__lg);
 
   text-decoration-line: underline;
   text-decoration-color: var(--color__theme-1);
@@ -171,10 +172,10 @@ img {
   max-width: 200px;
 }
 
-#know-more-gif-wrapper {
+#know-more-gif {
   display: none;
 }
 
-#know-more-gif-wrapper.know-more-gif--visible {
+#know-more-gif.visible {
   display: block;
 }
