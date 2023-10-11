@@ -8,5 +8,6 @@
 @media (max-width: 400px) {
   .projects {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: var(--space);
   }
 }
