@@ -177,6 +177,10 @@ img {
   max-width: 200px;
 }
 
+#know-more-heading:hover {
+  cursor: help;
+}
+
 #know-more-gif.hidden {
   display: none;
 }
