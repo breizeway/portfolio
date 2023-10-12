@@ -21,7 +21,6 @@ const setLoading = async (loading) => {
 };
 
 contactForm.onsubmit = async (e) => {
-  console.log(e);
   e.preventDefault();
 
   setLoading(true);
