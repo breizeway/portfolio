@@ -4,6 +4,12 @@
   padding: var(--space);
   display: flex;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+#site-container.transparent {
+  opacity: 0;
 }
 
 #content {
