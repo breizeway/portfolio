@@ -5,11 +5,15 @@
   display: flex;
   justify-content: center;
   opacity: 1;
-  transition: opacity 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  scale: 1;
+  filter: none;
 }
 
-#site-container.transparent {
+#site-container.before-load {
   opacity: 0;
+  padding-top: calc(var(--space) * 0.9);
+  filter: blur(0.4rem);
 }
 
 #content {
