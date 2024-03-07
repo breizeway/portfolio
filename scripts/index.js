@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("site-container").classList.remove("before-load");
+  setTimeout(() => {
+    document.getElementById("site-container").classList.remove("before-load");
+  });
 
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("contact-form__status");
