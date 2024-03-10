@@ -4,10 +4,7 @@
   padding: var(--space);
   display: flex;
   justify-content: center;
-  opacity: 1;
-  transition: all 0.2s;
-  scale: 1;
-  filter: none;
+  transition: opacity 0.2s, scale 0.2s;
 }
 
 #site-container.before-load {
