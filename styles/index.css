@@ -177,8 +177,12 @@ img {
   max-width: 200px;
 }
 
-#know-more-heading:hover {
+#know-more:hover {
   cursor: help;
+}
+
+#know-more-gif {
+  margin-bottom: 1em;
 }
 
 #know-more-gif.hidden {
