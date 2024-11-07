@@ -6,7 +6,7 @@
 }
 
 .projects__span-2 {
-  grid-column: span 2;
+  /* grid-column: span 2; */
 }
 
 @media (max-width: 476px) {
