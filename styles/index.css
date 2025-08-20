@@ -177,6 +177,11 @@ img {
   max-width: 200px;
 }
 
+#social-links {
+  margin-top: -0.5rem;
+  font-size: larger;
+}
+
 #know-more:hover {
   cursor: help;
 }
