@@ -5,10 +5,6 @@
   gap: var(--space__lg);
 }
 
-.projects__span-2 {
-  /* grid-column: span 2; */
-}
-
 @media (max-width: 476px) {
   .projects {
     grid-template-columns: repeat(1, minmax(0, 1fr));
