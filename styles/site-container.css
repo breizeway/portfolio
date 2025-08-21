@@ -4,12 +4,13 @@
   padding: var(--space);
   display: flex;
   justify-content: center;
-  transition: opacity 0.2s, scale 0.2s;
+  transition: opacity 0.5s, scale 0.5s;
+  transition-timing-function: cubic-bezier(0.05, 0.11, 0.24, 0.95, 1);
 }
 
 #site-container.before-load {
   opacity: 0;
-  scale: 100.5%;
+  scale: 101%;
 }
 
 #content {
