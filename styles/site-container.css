@@ -4,7 +4,7 @@
   padding: var(--space);
   display: flex;
   justify-content: center;
-  transition: opacity 0.5s, scale 0.5s;
+  transition: opacity 0.35s, scale 0.35s;
   transition-timing-function: cubic-bezier(0.05, 0.11, 0.24, 0.95, 1);
 }
 
